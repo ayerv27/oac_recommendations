@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ccc 1px solid;
+            text-align: center;
+
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e8491d;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .center-text {
+          text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 class = "center-text">Event Recommendation System</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form method="post">
+    <label for="countySelect">Select County:</label>
+    <select class="form-control" id="countySelect" name="county">
+        <option value="" disabled selected>Select your option</option>
+        {% for county in counties %}
+            <option value="{{ county }}" {% if county == selected_county %}selected{% endif %}>{{ county }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Get Recommendations</button>
+</form>
+
+
+        <!-- Recommendations will be displayed here. -->
+        <!-- Make sure to add the server-side logic to handle this. -->
+        {% if recommendations %}
+            <h2>Recommended Events:</h2>
+            <ul>
+                {% for recommendation in recommendations %}
+                    <li>{{ recommendation }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
