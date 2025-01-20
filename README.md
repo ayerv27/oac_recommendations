@@ -1,5 +1,5 @@
 # oac_recommendations
-A repo that houses the basic analysis done and recommendation workflow built to aid better identification of gaps in the OAC's funding
+A repo that houses the recommendation workflow built to aid better identification of gaps in the OAC's funding
 
 ## Event Recommender System - “How to” Guide
 
