@@ -5,7 +5,7 @@ A repo that houses the recommendation workflow built to aid better identificatio
 
 ## Event Recommender System - “How to” Guide
 
-This project implements a recommender system to suggest what kind of events will benefit more diverse people in a specific county in Oklahoma. The provided zip file has all the python files needed to implement the recommender system approach. 
+This project implements a recommender system to suggest what kind of events will benefit more diverse people in a specific county in Oklahoma.
 
 <br/>
 
