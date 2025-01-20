@@ -28,3 +28,7 @@ The project is organized into several folders:
     - Run the command python app.py.
     - This will start the Flask development server, typically accessible at http://127.0.0.1:5000/ in your web browser.
 
+<br/>
+
+### Please watch the demo video to get a quick idea of how it's supposed to look if you end up running it. 
+#### **Note**: The video will not capture the dropdown menu
